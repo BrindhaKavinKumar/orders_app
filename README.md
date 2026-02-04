@@ -27,14 +27,13 @@ A simple **retail order backend** demonstrating a complete **CI/CD pipeline** us
 ## **Architecture**
 
 Developer
-└── git push
-└── GitHub Actions (CI/CD)
-├── CI: run tests + build Docker image
-└── CD: push image to GHCR
-└── AWS EC2
-└── Docker Compose
-├── Flask API container (port 5000)
-└── MySQL container (persistent volume)
-
++- git push
++- GitHub Actions (CI/CD)
++- Build & test
++- Push image to GHCR
++- Deploy to AWS EC2
++- Docker Compose
++- Flask API
++- MySQL
 
 
