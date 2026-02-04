@@ -1,6 +1,6 @@
 services:
   api:
-    image: ghcr.io/BrindhaKavinKumar/orders_app:latest
+    image: ghcr.io/brindhakavinkumar/orders_app:latest
     ports:
       - "5000:5000"
     environment:
