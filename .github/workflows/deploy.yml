@@ -28,7 +28,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/orders_app:latest
+          tags: ghcr.io/brindhakavinkumar/orders_app:latest
 
       - name: Copy deployment files to EC2
         uses: appleboy/scp-action@v0.1.7
@@ -50,7 +50,7 @@ jobs:
             cd /opt/orders_app
 
             # Login so EC2 can pull the image
-            echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u "${{ secrets.GHCR_USERNAME }}" --password-stdin
+            echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u brindhakavinkumar --password-stdin
 
             # Pull latest images and restart
             docker compose -f docker-compose.prod.yml pull
